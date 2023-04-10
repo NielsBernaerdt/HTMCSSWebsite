@@ -1,0 +1,98 @@
+<html 
+      style="--banner: url(Resources/Resources_GraphicsProgramming_0.png); --bannerHeight: 50vh">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Niels Bernaerdt</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!------ Header ------>
+    <section class="header">
+        <nav id="nav-wrapper">
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="HideMenu()"></i>
+                <ul class="menuitem">
+                    <li><a href="Index.html#AboutID">ABOUT</a></li>
+                    <li><a href="Index.html#ProjectsID">PROJECTS</a></li>
+                    <li><a href="Index.html#ContactID">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="ShowMenu()"></i>
+        </nav>
+
+        <div class="text-box">
+            <h1>Graphics Prog 1 <a href="https://github.com/NielsBernaerdt/GraphicsProgramming1" target="_blank"><img src="Resources/IconGithub.png" class="github-logo"></a></h1>
+            <h2>
+                C++ Software Raytracer, Software Rasterizer & Hardware Rasterizer
+            </h2>
+        </div>
+    </section>
+
+    <section class="mainBody">
+        <h1>Description:</h1>
+        <p class="p1">
+            In the course of Graphics Programming 1 we covered different 3D rendering techniques and the math that is needed to efficiently calculate the pixels for the screen.
+            <br />The seen techniques cover Raytracing & Rasterization, of which we did the latter both software and hardware based.
+        </p>
+        <div class="row">
+            <a class="mainBodyCol">
+                <h1>Raytracer:</h1>
+                <p class="p1">
+                    We started with raytracing. With raytracing, every pixel of the screen will be calculated by shooting a ray into the world, and calculating the closest hit with the world objects.
+                    <br /> The sphere and plane primitive were important to get started, but we moved on to triangle meshes to be able to render more interesting objects.
+                    <br /> To make the rendering realistic we also cover the topic of PBR (Physically Based Rendering) which creates a nice visual of the 3D primitives but also aims to be a good approximation of real life lighting effects.
+                </p>
+            </a>
+
+            <a class="mainBodyCol">
+                <img src="Resources/Resources_GraphicsProgramming_1.gif">
+            </a>
+        </div>
+
+        <div class="row">
+            <a class="mainBodyCol">
+                <img src="Resources/Resources_GraphicsProgramming_2.gif">
+            </a>
+            <a class="mainBodyCol">
+                <h1>Rasterizer:</h1>
+                <p class="p1">
+                    The next big topic was rasterization. We wrote a (software) rasterizer that is able to render 3D triangles onto the screen. 
+                    <br />The software rasterizer conforms as closely as possible to the DirectX11 API. Like with the raytracer project, the lighting effects uses PBR techniques.
+                    <br /><br />Finally, there was a smaller project that uses the DirectX 11 API and uses the calculation power of the graphics card to make a rendering. 
+                    <br />The final project is a combination of the software rasterizer project and the DirectX 11 API where it should be possible to switch between the two renderers without graphical differences.
+                </p>
+            </a>
+        </div>
+    </section>
+
+    <!------ Footer ------>
+    <section class="footer">
+        <div class="contact">
+            <h1>Contact:</h1>
+            <h3>
+                e-mail: niels.bernaerdt@skynet.be
+                <br />tel: +32 478 43 89 53
+            </h3>
+            <div style="display: flex; gap: 5px;">
+                <a href="https://drive.google.com/file/d/1lWMY_FMNLQYvfuoHR9jH7aXTfUZgRpDP/view?usp=sharing" target="_blank" class="btn">DOWNLOAD RESUME</a>
+                <a href="https://www.linkedin.com/in/niels-bernaerdt-561952152/" target="_blank"><img src="Resources/IconLinkedIn.png" style="height: 43px; width:auto"></a>
+                <a href="https://github.com/NielsBernaerdt" target="_blank"><img src="Resources/IconGithub.png" style="height: 43px; width: auto"></a>
+            </div>
+        </div>
+    </section>
+
+    <!------ JavaScript for Toggle Menu ------>
+    <script>
+        var navLinks = document.getElementById("navLinks");
+        function ShowMenu() {
+            navLinks.style.right = "0";
+        }
+        function HideMenu() {
+            navLinks.style.right = "-200px";
+        }
+    </script>
+</body>
+</html>

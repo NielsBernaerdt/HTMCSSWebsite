@@ -1,0 +1,96 @@
+<html 
+      style="--banner: url(Resources/Resources_Chronos_0.png);
+            --bannerHeight: 50vh">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Niels Bernaerdt</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+</head>
+<body>
+        <!------ Header ------>
+        <section class="header">
+            <nav id="nav-wrapper">
+                <div class="nav-links" id="navLinks">
+                    <i class="fa fa-times" onclick="HideMenu()"></i>
+                    <ul class="menuitem">
+                        <li><a href="Index.html#AboutID">ABOUT</a></li>
+                        <li><a href="Index.html#ProjectsID">PROJECTS</a></li>
+                        <li><a href="Index.html#ContactID">CONTACT</a></li>
+                    </ul>
+                </div>
+                <i class="fa fa-bars" onclick="ShowMenu()"></i>
+            </nav>
+
+            <div class="text-box">
+                <h1>Chronos <a href="https://github.com/NielsBernaerdt/Chronos" target="_blank"><img src="Resources/IconGithub.png" class="github-logo"></a></h1>
+                <h2>
+                    2D C++ Engine
+                </h2>
+            </div>
+        </section>
+
+        <section class="mainBody">
+            <h1>Description:</h1>
+            <p class="p1">
+                For this school assignment, the goal was to end up with a 2D engine capable of creating a simple arcade game.<br />
+                Starting from a simple project containing a basic gameloop, I gradually upgraded the project using various game programming patterns.<br />
+                SDL is used for the rendering, SDL Mixer for the audio and a combination of SDL Events with XInput to manage input.
+            </p>
+            <div class="row">
+                <a class="mainBodyCol">
+                    <h1>Features:</h1>
+                    <p class="p1">
+                        <h2>- Entity Component System:</h2>
+                    <p class="p1"> Chronos follows a "composition over inheritance" principle. GameObjects will contain components to define its behavior.<br /> </p>
+                    <h2>- Game Loop:</h2>
+                    <p class="p1">The Game Loop consists of a ProcessInput(), Update(), Render() and a sleepduration.</p>
+                    <h2>- Pimpl:</h2>
+                    <p class="p1"> The InputManager has been pimpled away</p>
+                    <h2>- Command Pattern:</h2>
+                    <p class="p1"> The Command Pattern is used to bind input to actions.</p>
+                    <h2>- Observer Pattern:</h2>
+                    <p class="p1">An Observer is implemented for the gamestate.(score, player lives, ...) </p>
+                    <h2>- EventQueue & Threading:</h2>
+                    <p class="p1"> The AudioManager uses a Ringbuffer as EventQueue to queue audio requests. This queue gets played/loaded on a seperate thread.</p>
+                    <h2>- Singleton:</h2>
+                    <p class="p1">Some singletons like the AudioManager, ResourceManager and SceneManager are implemented. </p>
+                </a>
+
+                <a class="mainBodyCol">
+                    <img src="Resources/Resources_Chronos_1.gif">
+                </a>
+
+            </div>
+        </section>
+
+        <!------ Footer ------>
+        <section class="footer">
+            <div class="contact">
+                <h1>Contact:</h1>
+                <h3>
+                    e-mail: niels.bernaerdt@skynet.be
+                    <br />tel: +32 478 43 89 53
+                </h3>
+                <div style="display: flex; gap: 5px;">
+                    <a href="https://drive.google.com/file/d/1lWMY_FMNLQYvfuoHR9jH7aXTfUZgRpDP/view?usp=sharing" target="_blank" class="btn">DOWNLOAD RESUME</a>
+                    <a href="https://www.linkedin.com/in/niels-bernaerdt-561952152/" target="_blank"><img src="Resources/IconLinkedIn.png" style="height: 43px; width:auto"></a>
+                    <a href="https://github.com/NielsBernaerdt" target="_blank"><img src="Resources/IconGithub.png" style="height: 43px; width: auto"></a>
+                </div>
+            </div>
+        </section>
+
+        <!------ JavaScript for Toggle Menu ------>
+        <script>
+            var navLinks = document.getElementById("navLinks");
+            function ShowMenu() {
+                navLinks.style.right = "0";
+            }
+            function HideMenu() {
+                navLinks.style.right = "-200px";
+            }
+        </script>
+    </body>
+</html>

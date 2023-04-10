@@ -1,0 +1,97 @@
+<html 
+      style="--banner: url(Resources/Resources_SquirrelMania_0.png);
+            --bannerHeight: 50vh">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Niels Bernaerdt</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!------ Header ------>
+    <section class="header">
+        <nav id="nav-wrapper">
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="HideMenu()"></i>
+                <ul class="menuitem">
+                    <li><a href="Index.html#AboutID">ABOUT</a></li>
+                    <li><a href="Index.html#ProjectsID">PROJECTS</a></li>
+                    <li><a href="Index.html#ContactID">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="ShowMenu()"></i>
+        </nav>
+
+        <div class="text-box">
+            <h1>SquirrelMania! <a href="https://github.com/NielsBernaerdt/SquirrelMania" target="_blank"><img src="Resources/IconGithub.png" class="github-logo"></a></h1>
+            <h2>
+                C++ UE4 GroupsWork
+            </h2>
+        </div>
+    </section>
+
+    <section class="mainBody">
+        <div class="row">
+            <a class="mainBodyCol">
+                <h1>Description:</h1>
+                <p class="p1">
+                    In this course I got through the process used to build games and 3d applications.<br />
+                    The goal was to create a vertical slice of a game, while going through the complete production pipeline from concept to final product.<br />
+                    The following topics got covered: The global production process and the planning of a 3D application. | Design documents. | Version Control Systems. | Team and production manaagement.
+                </p>
+            </a>
+
+            <a class="mainBodyCol">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/5SPDCNHPdkY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </a>
+        </div>
+        <div class="row">
+            <a class="mainBodyCol">
+                <h1>Features:</h1>
+                <p class="p1">
+                    <h2>- Parallax Camera:</h2>
+                <p class="p1"> A parallax effect consisting of 3 layers created through Unreal Shading & Materials. </p>
+                <h2>-Double Jump:</h2>
+                <p class="p1">A double jump, which resets after touching the sides/ceiling. </p>
+                <h2>-Downwards air attack:</h2>
+                <p class="p1">The player can use a downwards attack move while in the air. </p>
+                <h2>- Charge attack:</h2>
+                <p class="p1">Holding the attack stacks the damage and results in a different animation. </p>
+            </a>
+
+            <a class="mainBodyCol">
+                <img src="Resources/Resources_SquirrelMania_1.gif">
+            </a>
+        </div>
+    </section>
+
+    <!------ Footer ------>
+    <section class="footer">
+        <div class="contact">
+            <h1>Contact:</h1>
+            <h3>
+                e-mail: niels.bernaerdt@skynet.be
+                <br />tel: +32 478 43 89 53
+            </h3>
+            <div style="display: flex; gap: 5px;">
+                <a href="https://drive.google.com/file/d/1lWMY_FMNLQYvfuoHR9jH7aXTfUZgRpDP/view?usp=sharing" target="_blank" class="btn">DOWNLOAD RESUME</a>
+                <a href="https://www.linkedin.com/in/niels-bernaerdt-561952152/" target="_blank"><img src="Resources/IconLinkedIn.png" style="height: 43px; width:auto"></a>
+                <a href="https://github.com/NielsBernaerdt" target="_blank"><img src="Resources/IconGithub.png" style="height: 43px; width: auto"></a>
+            </div>
+        </div>
+    </section>
+
+    <!------ JavaScript for Toggle Menu ------>
+    <script>
+        var navLinks = document.getElementById("navLinks");
+        function ShowMenu() {
+            navLinks.style.right = "0";
+        }
+        function HideMenu() {
+            navLinks.style.right = "-200px";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<html 
+      style="--banner: url(Resources/Resources_SQLLibraryCatalogue_0.gif);
+            --bannerHeight: 50vh">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Niels Bernaerdt</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!------ Header ------>
+    <section class="header">
+        <nav id="nav-wrapper">
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="HideMenu()"></i>
+                <ul class="menuitem">
+                    <li><a href="Index.html#AboutID">ABOUT</a></li>
+                    <li><a href="Index.html#ProjectsID">PROJECTS</a></li>
+                    <li><a href="Index.html#ContactID">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="ShowMenu()"></i>
+        </nav>
+
+        <div class="text-box">
+            <h1>SQL Library Catalogue <a href="https://github.com/NielsBernaerdt/LibraryCatalogueSQL" target="_blank"><img src="Resources/IconGithub.png" class="github-logo"></a></h1>
+            <h2>
+                C# SQL Library Catalogue .Net Application
+            </h2>
+        </div>
+    </section>
+
+    <section class="mainBody">
+        <h1>Description:</h1>
+        <p class="p1">
+            After learning some very basic SQL at school, I wanted to try out if I could manage a simple database using C# and SQL.
+            <br /> In this C# .NET WinForm Application I used a combination of C# and some stored procedures to alter a local database.
+        </p>
+        <div class="row">
+            <a class="mainBodyCol">
+                <h1>Features:</h1>
+                <p class="p1">
+                    <h2>- .Net WinForm Application:</h2>
+                <p class="p1"> .NET is a widely-used framework in the software development industry. 
+                Gaining experience in the framework would undoubtedly benefit me, leaving a positive impact on my development skills.<br /> </p>
+                <h2>- SQL Stored Procedures:</h2>
+                <p class="p1"> SQL  Stored Procedures are pre-written, compiled SQL programs stored on a database server. They encapsulate one or more SQL statements into a single executable unit that can easily be executed. This provides improved performance as well as better code organization.<br /> </p>
+                <h2>- SQL Server Management Studio:</h2>
+                <p class="p1"> Microsoft's SQL Server Management Studio is used for the creation of the local database & the created SQL Stored Procedures.<br /> </p>
+            </a>
+
+            <a class="mainBodyCol">
+                <img src="Resources/Resources_SQLLibraryCatalogue_0.gif">
+            </a>
+
+        </div>
+    </section>
+
+    <!------ Footer ------>
+    <section class="footer">
+        <div class="contact">
+            <h1>Contact:</h1>
+            <h3>
+                e-mail: niels.bernaerdt@skynet.be
+                <br />tel: +32 478 43 89 53
+            </h3>
+            <div style="display: flex; gap: 5px;">
+                <a href="https://drive.google.com/file/d/1lWMY_FMNLQYvfuoHR9jH7aXTfUZgRpDP/view?usp=sharing" target="_blank" class="btn">DOWNLOAD RESUME</a>
+                <a href="https://www.linkedin.com/in/niels-bernaerdt-561952152/" target="_blank"><img src="Resources/IconLinkedIn.png" style="height: 43px; width:auto"></a>
+                <a href="https://github.com/NielsBernaerdt" target="_blank"><img src="Resources/IconGithub.png" style="height: 43px; width: auto"></a>
+            </div>
+        </div>
+    </section>
+
+    <!------ JavaScript for Toggle Menu ------>
+    <script>
+        var navLinks = document.getElementById("navLinks");
+        function ShowMenu() {
+            navLinks.style.right = "0";
+        }
+        function HideMenu() {
+            navLinks.style.right = "-200px";
+        }
+    </script>
+</body>
+</html>
