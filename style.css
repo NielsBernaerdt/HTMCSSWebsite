@@ -151,10 +151,10 @@ nav .fa{
 
 /*----- Hightlighted Projects -----*/
 .Highlights {
-    width: 80%;
+    width: 70%;
     margin: auto;
     text-align: center;
-    padding-top: 50px;
+    /*padding-top: 50px;*/
 }
 
 .highlights-col {
@@ -259,7 +259,7 @@ p{
 }
 
 .row{
-    margin-top: 5%;
+    margin-top: 2%;
     display: flex;
     justify-content: space-between;
 }
@@ -329,13 +329,15 @@ h3{
 
 /*----- Other Pages -----*/
 .github-logo {
-    /*background-color: #333333;*/
     background-color: #772f9d;
-    padding: 10px;
-    border-radius: 10%;
-    width: 64px;
-    height: 64px;
+    padding: 5px;
+    border-radius: 5%;
+    width: 35px !important;
+    height: 35px;
     vertical-align: middle;
+    /*text-align: right;*/
+
+    margin-left: 5px;
 }
 .mainBody {
     margin: 0px auto;
