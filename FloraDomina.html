@@ -32,10 +32,52 @@
 	</section>
 
 	<section class="mainBody">
-		<h1>Description:</h1>
-		<p class="p1">
-			<!--here-->
-		</p>
+		<div style="text-align: left;">
+			<span style="font-size: 22px;">Project on Itch.io: </span>
+			<a href="https://davevanverdegem.itch.io/flora-domina" target="_blank"> Flora Domina </a>
+		</div>
+
+
+		<div class="row">
+			<a class="mainBodyCol">
+				<h1>Description:</h1>
+				<p class="p1">
+					Flora Domina is a 4X-lite turn-based  strategy game where you play as the nature guardian of a small island.
+					When humans settle on the island you discover that they have no intention of preserving nature and you'll have to take action.
+					<br />
+					<br />
+					In this Unity group project I was the sole programmer. I was mainly responsible for implementing the turn based logic, player actions and AI behavior.
+					<br />I worked closely together with the Technical artist in creating the procedural island generation and set up functionality for the Sound Designer & HUD/UI artist.
+				</p>
+			</a>
+
+			<a class="mainBodyCol">
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/jz9SjQqxo2Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+			</a>
+		</div>
+		<div class="row">
+			<a class="mainBodyCol">
+				<h1>Features:</h1>
+				<p class="p1">
+					<h2>-Turn-Based Logic:</h2>
+				<p class="p1">The turn system of Flora Domina has been implemented as a state pattern with each state representing a possible phase of the turn (e.g. upkeep of resources, a phase for the player input, ...)</p>
+				<h2>-Procedural Island Generation:</h2>
+				<p class="p1">A generation algorithm creates the island as a hexagonal grid in a dynamic & random shape.<br />
+					Then, another algorithm is run to assign each hexcell a type (dirt tile, mountain tile, geyser tile, ...) and Playerfactions are spawned at opposite sides of the island. <br />
+					Lastly, the edge of the island gets calculated for a shader to be applied, creating a cliff.
+					</p>
+				<h2>-Seasons:</h2>
+				<p class="p1">Every x turns, the game goes into the next season. This resulted in lots of additional functionality needed for both visual changes as well as gameplay elements behaving differently.</p>
+				<h2>-Player Input & Player Actions:</h2>
+				<p class="p1">A Command Pattern is implemented in the player pawn. Input gets translated in commands which get added to a command queue, ready to be executed.</p>
+				<h2>-AI Decision algorithms:</h2>
+				<p class="p1">The AI uses the same commands as the player, with the only difference that it generates them using an algorithm instead of taking them from user input.</p>
+			</a>
+
+			<a class="mainBodyCol">
+				<img src="Resources/Resources_FloraDomina_1.png">
+			</a>
+		</div>
 	</section>
 
 	<!------ Footer ------>

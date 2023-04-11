@@ -1,0 +1,98 @@
+<html style="--banner: url(Resources/Resources_HexBomberman_1.png);
+            --bannerHeight: 50vh">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title> Niels Bernaerdt</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+</head>
+<body>
+	<!------ Header ------>
+	<section class="header">
+		<nav id="nav-wrapper">
+			<div class="nav-links" id="navLinks">
+				<i class="fa fa-times" onclick="HideMenu()"></i>
+				<ul class="menuitem">
+					<li><a href="Index.html#AboutID">ABOUT</a></li>
+					<li><a href="Index.html#ProjectsID">PROJECTS</a></li>
+					<li><a href="Index.html#ContactID">CONTACT</a></li>
+				</ul>
+			</div>
+			<i class="fa fa-bars" onclick="ShowMenu()"></i>
+		</nav>
+
+		<div class="text-box">
+			<h1>HexBomberman</h1>
+			<h1>(In Progress)</h1>
+			<h2>
+				C++ Graphics Engine using Physx & DirectX11
+			</h2>
+		</div>
+	</section>
+
+	<section class="mainBody">
+		<div style="text-align: left;">
+			<span style="font-size: 22px;">Github Link: </span>
+			<a href="https://github.com/NielsBernaerdt/HexBomberman" target="_blank">
+				<img src="Resources/IconGithub.png" class="github-logo">
+			</a>
+		</div>
+
+		<h1>Description:</h1>
+		<p class="p1">
+			In the course of Graphics Programming 2 I learned the finer points of DirectX11, HLSL Shader and PhysX programming. <br />
+			We got to render 3D scenes in realtime with DirectX 11 and were given a better understanding of the design of commercial and open source game engines. <br />
+			In this way, we will be able to quickly understand and work with these other game engines.
+		</p>
+
+		<div class="row">
+			<a class="mainBodyCol">
+				<h1>Features I'm working on:</h1>
+				<p class="p1">
+					<h2>-Hexagonal Grid:</h2>
+				<p class="p1"> Instead of the classic Bomberman, this version will be using a hexagonal grid. </p>
+				<h2>-PhysX physics:</h2>
+				<p class="p1"> Implementation of the physics part of a 3D application including: collision detection & Character Controller.</p>
+				<h2>-HLSL Shaders:</h2>
+				<p class="p1">eg: Vertex Skinning shaders for animations, Normal mapping, post processing shaders, ...</p>
+				<h2>-Graphics Engine:</h2>
+				<p class="p1">Completion of a custom graphical 3D API and Physics engine.</p>
+			</a>
+
+			<!--<a class="mainBodyCol">
+			<img src="Resources/Resources_HexBomberman_1.png">
+		</a>-->
+
+		</div>
+	</section>
+
+	<!------ Footer ------>
+	<section class="footer">
+		<div class="contact">
+			<h1>Contact:</h1>
+			<h3>
+				e-mail: niels.bernaerdt@skynet.be
+				<br />tel: +32 478 43 89 53
+			</h3>
+			<div style="display: flex; gap: 5px;">
+				<a href="https://drive.google.com/file/d/1lWMY_FMNLQYvfuoHR9jH7aXTfUZgRpDP/view?usp=sharing" target="_blank" class="btn">DOWNLOAD RESUME</a>
+				<a href="https://www.linkedin.com/in/niels-bernaerdt-561952152/" target="_blank"><img src="Resources/IconLinkedIn.png" style="height: 43px; width:auto"></a>
+				<a href="https://github.com/NielsBernaerdt" target="_blank"><img src="Resources/IconGithub.png" style="height: 43px; width: auto"></a>
+			</div>
+		</div>
+	</section>
+
+	<!------ JavaScript for Toggle Menu ------>
+	<script>
+		var navLinks = document.getElementById("navLinks");
+		function ShowMenu() {
+			navLinks.style.right = "0";
+		}
+		function HideMenu() {
+			navLinks.style.right = "-200px";
+		}
+	</script>
+</body>
+</html>
