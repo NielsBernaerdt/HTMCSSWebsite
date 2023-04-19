@@ -34,8 +34,10 @@
 
 	<section class="mainBody">
 		<div style="text-align: left;">
-			<span style="font-size: 22px;">Project on Itch.io: </span>
-			<a href="https://davevanverdegem.itch.io/flora-domina" target="_blank"> Flora Domina </a>
+			<span style="font-size: 22px; font-style:italic">Released on Steam: </span>
+			<a href="https://store.steampowered.com/app/2285500/Flora_Domina/?curator_clanid=4777282&utm_source=SteamDB" target="_blank">
+				<img src="Resources/IconSteam.png" class="steam-logo">
+			</a>
 		</div>
 
 
@@ -63,10 +65,11 @@
 					<h2>-Turn-Based Logic:</h2>
 				<p class="p1">The turn system of Flora Domina has been implemented as a state pattern with each state representing a possible phase of the turn (e.g. upkeep of resources, a phase for the player input, ...)</p>
 				<h2>-Procedural Island Generation:</h2>
-				<p class="p1">A generation algorithm creates the island as a hexagonal grid in a dynamic & random shape.<br />
+				<p class="p1">
+					A generation algorithm creates the island as a hexagonal grid in a dynamic & random shape.<br />
 					Then, another algorithm is run to assign each hexcell a type (dirt tile, mountain tile, geyser tile, ...) and Playerfactions are spawned at opposite sides of the island. <br />
 					Lastly, the edge of the island gets calculated for a shader to be applied, creating a cliff.
-					</p>
+				</p>
 				<h2>-Seasons:</h2>
 				<p class="p1">Every x turns, the game goes into the next season. This resulted in lots of additional functionality needed for both visual changes as well as gameplay elements behaving differently.</p>
 				<h2>-Player Input & Player Actions:</h2>

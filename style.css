@@ -331,6 +331,12 @@ h3{
 
     margin-left: 5px;
 }
+.steam-logo {
+    width: 40px !important;
+    height: 40px;
+    vertical-align: middle;
+    margin-left: 5px;
+}
 .mainBody {
     margin: 0px auto;
     width: 80%;
