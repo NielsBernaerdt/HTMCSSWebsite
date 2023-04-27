@@ -3,6 +3,7 @@
     padding: 0;
     scroll-behavior: smooth;
     font-family: 'Source Sans Pro', sans-serif;
+    color: white;
 }
 :root {
     --banner: url(Resources/banner.png);
@@ -11,7 +12,8 @@
 html {
     /*background-color: #536878;*/
     /*background-color: #536872;*/
-    background-color: #36454f;
+    /*background-color: #36454f;*/
+    background-color: #232526;
 }
 .header {
     min-height: var(--bannerHeight);
@@ -238,9 +240,10 @@ nav .fa{
     text-align: center;
     padding-top: 30px;
 }
-h1{
+h1 {
     font-size: 48px;
     font-weight: 600;
+    /*color: #bdbfc1;*/
 }
 p{
     color: white;
@@ -313,10 +316,10 @@ h3{
 .contact {
     width: 25%;
     margin: auto;
-    text-align: left;
+    text-align: center;
 }
     .contact h3 {
-        text-align: left;
+        text-align: center;
         font-weight: 300;
     }
 
@@ -348,7 +351,6 @@ h3{
 }
 .p1{
     font-size: 20px;
-    color: black;
 }
 .mainBodyCol{
     flex-basis: 48%;
