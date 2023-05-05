@@ -359,3 +359,28 @@ h3{
 .mainBodyCol img{
     width: 100%;
 }
+
+.PageRow {
+    width: 80%; 
+    display: flex;
+    margin: 50px auto;
+}
+.PageColumn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+    .PageColumn .h1 {
+        padding: 20px;
+        text-align: center;
+    }
+    .PageColumn .p1 {
+        padding: 20px;
+        text-align: left;
+    }
+    .PageColumn .img {
+        max-height: 100%;
+        max-width: 100%;
+    }

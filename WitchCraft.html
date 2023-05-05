@@ -1,5 +1,5 @@
 <html style="--banner: url(Resources/Resources_WitchCraft_0.png);
-            --bannerHeight: 50vh">
+            --bannerHeight: 40vh">
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title> Niels Bernaerdt</title>
@@ -39,37 +39,96 @@
 			</div>
 		</button>
 
-		<h1><br />Description:</h1>
+		<h1>Description:</h1>
 		<p class="p1">
-			For this personal research project, the main goal was to figure out realtime multiplayer.
-			<br /> Additionally, other subgoals were: familiarizing myself more with Unity's input & implementing code-based animations.
+			For this personal project, the main goal was to figure out realtime multiplayer.
+			<br /> I did this with a prototype where I explored the idea of "SpellCrafting" as main game mechanic.
+			<br /> During the process, My attention was drawn to finding a way of evading the obnoxious spaghetti animation graph. Here, Crossfade presented an excellent solution.
+			<br /> Furthermore, the opportunity presented itself for me to familiarize myself more with Unity's Input System and the alternative approaches to it rather than just connecting everything in the Player Input Component in the Unity Editor.
 		</p>
-		<div class="row">
-			<a class="mainBodyCol">
-				<h1>Features:</h1>
-				<p class="p1">
-					<h2>- Networking:</h2>
-				<p class="p1">
-					As my first ever attempt at tackling multiplayer, I decided to use Netcode for Gameobjects, a framework provided by Unity, to accomplish realtime multiplayer.
-					<br />In this project emphasis was placed on creating my own network objects/variables, serializing my own data and on clientRPC/serverRPC.
-					<br />Minimal Quickjoin matchmaking functionality has been implemented.
-				</p>
-				<h2>- State Pattern:</h2>
-				<p class="p1"> A state pattern is utilized by Pawns to transition between various behaviors. This allows for efficient and organized management of complex game behaviors and reduces code complexity and redundancy. <br /> </p>
-				<h2>- Input:</h2>
-				<p class="p1">To familiarize myself more with Unity's input system, I took a profound look at the documentation and came up with a code-only implementation using input actions and callbacks. </p>
-				<h2>- Spell Crafting:</h2>
-				<p class="p1"> A pawn with the wizard component can equip multiple spells. Casting these spells consecutively creates a new combined spell with unique effects, defined by the order in which it was cast.</p>
-				<h2>- Events:</h2>
-				<p class="p1"> By implementing a singleton event handler, unnecessary update calls on HUD elements can be prevented and maximal decoupling can be ensured. On a change, an event gets invoked and the corresponding UI elements is updated.</p>
-				<h2>- Animations:</h2>
-				<p class="p1"> Animations are managed entirely within code, evading the spaghetti unity animator entirely. Combine this with each state (see State Pattern) returning a hashed animation string and optimal efficiency has been achieved.</p>
-			</a>
+		<h1><br />Features:</h1>
+		<p class="p1">
+			- Multiplayer<br />
+			- Spell Crafting<br />
+			- Code-Based Animations<br />
+			- Input via Callbacks<br />
+			- State Pattern<br />
+		</p>
 
-			<a class="mainBodyCol">
-				<img src="Resources/Resources_WitchCraft_0.png" style="width:auto; height:auto;">
-			</a>
+		<div class="PageRow">
+			<div class="PageColumn">
+				<img src="Resources/Resources_WitchCraft_1.gif" alt="Your Image" style="width: 90%; height: 90%;" />
+			</div>
+			<div class="PageColumn">
+				<div>
+					<h2>Multiplayer</h2>
+					<p class="p1">
+						In my first ever attempt at tackling multiplayer I used Netcode for GameObjects, a framework provided by Unity.
+						<br />In this project emphasis was placed on creating my own network objects/variables, serializing my own data and implementing correct client/server RPC logic.
+						<br />Minimal Quickjoin matchmaking functionality makes the client join any existing lobby or will create a new lobby if none are found.
+					</p>
+				</div>
+			</div>
+		</div>
 
+		<div class="PageRow">
+			<div class="PageColumn">
+				<div>
+					<h2>Spell Crafting</h2>
+					<p class="p1">
+						A pawn with the wizard component can equip multiple spells. Casting these spells consecutively creates a new combined spell with unique effects, defined by the order in which the spells were cast.
+					</p>
+				</div>
+			</div>
+			<div class="PageColumn">
+				<img src="Resources/Resources_WitchCraft_2.gif" alt="Your Image" style="width: 85%; height: 85%; " />
+			</div>
+		</div>
+
+		<div class="PageRow">
+			<div class="PageColumn">
+				<img src="Resources/Resources_WitchCraft_3.gif" alt="Your Image" style="width: 85%; height: 85%;" />
+			</div>
+			<div class="PageColumn">
+				<div>
+					<h2>Code-Based Animations</h2>
+					<p class="p1">
+						Animations are managed entirely within code, evading the spaghetti unity animator.
+						<br /> Combine this with each state (see State Pattern), which returns a hashed animation string to its corresponding animation, and optimal efficiency has been achieved.
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="PageRow">
+			<div class="PageColumn">
+				<div>
+					<h2>Input Using Callbacks</h2>
+					<p class="p1">
+						To familiarize myself more with Unity's input system, I took a profound look at the documentation and came up with a code-only implementation using input actions and callbacks.
+						<br /><br />However, the requirement for hardcoded name values is a drawback,
+						but I found this to be a more clean solution compared to relying on a correctly set up input component.
+					</p>
+				</div>
+			</div>
+			<div class="PageColumn">
+				<img src="Resources/Resources_WitchCraft_4.png" alt="Your Image" style="width: 90%; height: 90%; " />
+			</div>
+		</div>
+
+		<div class="PageRow">
+			<div class="PageColumn">
+				<img src="Resources/Resources_WitchCraft_5.png" alt="Your Image" style="width: 90%; height: 90%;" />
+			</div>
+			<div class="PageColumn">
+				<div>
+					<h2>State Pattern</h2>
+					<p class="p1">
+						A state pattern is utilized by Pawns to transition between Idle, Move & Cast. This allows for efficient and organized management
+						 of game behaviors and provides a great opportunity to decouple a lot of the code.
+					</p>
+				</div>
+			</div>
 		</div>
 	</section>
 

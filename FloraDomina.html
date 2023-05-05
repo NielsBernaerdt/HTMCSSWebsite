@@ -1,5 +1,5 @@
 <html style="--banner: url(Resources/Resources_FloraDomina_0.png);
-            --bannerHeight: 50vh">
+            --bannerHeight: 40vh">
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title> Niels Bernaerdt</title>
@@ -44,6 +44,7 @@
 			</div>
 		</button>
 
+
 		<div class="row">
 			<a class="mainBodyCol">
 				<h1>Description:</h1>
@@ -61,30 +62,97 @@
 				<iframe width="560" height="315" src="https://www.youtube.com/embed/jz9SjQqxo2Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 			</a>
 		</div>
-		<div class="row">
-			<a class="mainBodyCol">
-				<h1>My Contributions:</h1>
-				<p class="p1">
-					<h2>-Turn-Based Logic:</h2>
-				<p class="p1">The turn system of Flora Domina has been implemented as a state pattern with each state representing a possible phase of the turn (e.g. upkeep of resources, a phase for the player input, ...)</p>
-				<h2>-Procedural Island Generation:</h2>
-				<p class="p1">
-					A generation algorithm creates the island as a hexagonal grid in a dynamic & random shape.<br />
-					Then, another algorithm is run to assign each hexcell a type (dirt tile, mountain tile, geyser tile, ...) and Playerfactions are spawned at opposite sides of the island. <br />
-					Lastly, the edge of the island gets calculated for a shader to be applied, creating a cliff.
-				</p>
-				<h2>-Seasons:</h2>
-				<p class="p1">Every x turns, the game goes into the next season. This resulted in lots of additional functionality needed for both visual changes as well as gameplay elements behaving differently.</p>
-				<h2>-Player Input & Player Actions:</h2>
-				<p class="p1">A Command Pattern is implemented in the player pawn. Input gets translated in commands which get added to a command queue, ready to be executed.</p>
-				<h2>-AI Decision algorithms:</h2>
-				<p class="p1">The AI uses the same commands as the player, with the only difference that it generates them using an algorithm instead of taking them from user input.</p>
-			</a>
+		<h1>My Contributions:</h1>
+		<p class="p1">
+			- State-Based Turn Transitions<br />
+			- Procedural Island Generation<br />
+			- Player Actions as Commands<br />
+			- AI Decision algorithms<br />
+			- Seasons<br />
+		</p>
 
-			<a class="mainBodyCol">
-				<img src="Resources/Resources_FloraDomina_1.png">
-			</a>
+		<div class="PageRow">
+			<div class="PageColumn">
+				<img src="Resources/Resources_FloraDomina_1.gif" alt="Your Image" style="width: 90%; height: 90%;" />
+			</div>
+			<div class="PageColumn">
+				<div>
+					<h2>State-Based Turn Transitions</h2>
+					<p class="p1">
+						The turn system of Flora Domina has been implemented as a state pattern with each phase of the turn represented as a state.
+						<br /><br /> This way, the 'TurnStart' state will automatically transition into the 'TurnActions' state after having calculated the changes in resources. The 'TurnActions' state will keep checking for input
+						and create corresponding player commands until the turn ends.
+						<br />Ending the turn will transition the 'TurnActions' state to an 'TurnEnd' state, which in the case of the AI will show every move it made.
+					</p>
+				</div>
+			</div>
 		</div>
+
+		<div class="PageRow">
+			<div class="PageColumn">
+				<div>
+					<h2>Procedural Island Generation</h2>
+					<p class="p1">
+						Generating the island happens in 3 major steps.
+						Firstly, the island gets created within a hexagonal grid in a dynamic, random shape.
+						Secondly, another algorithm is run over the created island to assign different habitat types to each hexagonal cell.
+						<br />Lastly, the edge of the island gets detected and stored for a shader to create a rocky cliff over it.
+					</p>
+				</div>
+			</div>
+			<div class="PageColumn">
+				<img src="Resources/Resources_FloraDomina_2.gif" alt="Your Image" style="width: 90%; height: 90%; " />
+			</div>
+		</div>
+
+		<div class="PageRow">
+			<div class="PageColumn">
+				<img src="Resources/Resources_FloraDomina_3.gif" alt="Your Image" style="width: 90%; height: 90%;" />
+			</div>
+			<div class="PageColumn">
+				<div>
+					<h2>Player Actions as Commands</h2>
+					<p class="p1">
+						A Command Pattern is implemented in the player pawn. 
+						<br />Input gets translated in commands which get added to a command queue, ready to be executed.
+						<br /> This commands-based approach makes it possible for the AI Algorithm to reuse the exact same commands.
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="PageRow">
+			<div class="PageColumn">
+				<div>
+					<h2>AI Decision algorithms</h2>
+					<p class="p1">
+						The AI uses the same commands as the player, with the only difference that it generates them using an algorithm instead of taking them from user input.
+						<br /> The algorithm starts with gathering all possible Tasks for the AI in the current state of the game. Then the list is ordered by the current priority of the tasks.
+						Lastly, difficutly & randomness variables are introduced in the process of picking tasks from this list and enqueuing them as commands for the AI.
+					</p>
+				</div>
+			</div>
+			<div class="PageColumn">
+				<img src="Resources/Resources_FloraDomina_4.gif" alt="Your Image" style="width: 90%; height: 90%; " />
+			</div>
+		</div>
+
+		<div class="PageRow">
+			<div class="PageColumn">
+				<img src="Resources/Resources_FloraDomina_5.gif" alt="Your Image" style="width: 90%; height: 90%;" />
+			</div>
+			<div class="PageColumn">
+				<div>
+					<h2>Seasons</h2>
+					<p class="p1">
+						Every 10 turns, the island goes into the next season. This resulted in lots of additional functionality needed for both visual changes as well as gameplay elements behaving differently.
+						<br />An observer pattern is used for the gameplay elements to know how to behave after the season changes,
+						the upkeep values of resources get calculated based on the current season & Shader Keywords are responsible for managing the visual modifications.
+					</p>
+				</div>
+			</div>
+		</div>
+
 	</section>
 
 	<!------ Footer ------>

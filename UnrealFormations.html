@@ -1,6 +1,6 @@
 <html 
       style="--banner: url(Resources/Resources_UnrealFormations_2.gif);
-            --bannerHeight: 50vh">
+            --bannerHeight: 40vh">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Niels Bernaerdt</title>
@@ -40,81 +40,95 @@
             </div>
         </button>
 
-        <h1><br />Description:</h1>
+        <h1>Description:</h1>
         <p class="p1">
             As a first ever attempt at tackling C++ in UE4, I opted to expand my knowledge of steering behaviors.<br />
             After already having created a 2D flocking behavior using blended steering,<br />
             I now aspired creating formations inspired by the Total War series.
-        </p>
-
-        <h1>Implementation</h1>
-        <p class="p1">
+            <br />
+            <br />
             Starting from the top down template provided by UE4, everything is 100% C++.<br /> Blueprints are then derived from the base C++ class in order to get everything working in the engine.
         </p>
-
-        <h1>Structure</h1>
-        <h2>
-            <br />Player controller & player pawn
-        </h2>
+        <h1><br />Features:</h1>
         <p class="p1">
-            This is the formation itself. It is responsible for spawning and destroying units, moving the units around as a movement group and switching between different formations. Every time the player pawn recieves input through the player controller, it will calculate a new formation based on the target location, the current amount of units and the desired formation type.
-        </p>
-        <h2>
-            Actor Spawner
-        </h2>
-        <p class="p1">
-            Set up as a child object to the player pawn, the actor spawner will take care of spawning and destroying the units. The spawner will also make the player pawn aware of the creation/destruction of one of its units.
-        </p>
-        <h2>Unit</h2>
-        <p class="p1">
-            A simple unit of the formation. A unit will walk towards the target location using a linear velocity.
+            - Player Controller & Player Pawn<br />
+            - Actor Spawner<br />
+            - Formations
         </p>
 
-        <h1>Conclusion</h1>
-        <p class="p1">
-            The scope of the subject "Formations" is considerable. Not only the creation of the formation, but also its orientation are important parts in the production of a realistic group movement. Furthermore, the individual orientation of the units as well as the position they sustain relative to the other units, possibly via (blended) steering behaviors, make up to a neat result.
+        <div class="PageRow">
+            <div class="PageColumn">
+                <img src="Resources/Resources_UnrealFormations_2.gif" alt="Your Image" style="width: 90%; height: 90%;" />
+            </div>
+            <div class="PageColumn">
+                <div>
+                    <h2>Player Controller & Player Pawn</h2>
+                    <p class="p1">
+                        This can be seen as some kind of 'Formation Manager'. It is responsible for moving the units around as a single movement group and for switching between different formations.
+                        <br />Upon recieving input from the player pawn through the player controller, it will calculate a new formation based on: the target location,
+                        the current amount of units & the desired formation type.
+                    </p>
+                </div>
+            </div>
+        </div>
 
-            Even though I prioritized the forming of the formation itself while also making sure all agents walk smoothly and coherent relative to the other units of the formation, I still kept those other focus points in my mind. For instance:
+        <div class="PageRow">
+            <div class="PageColumn">
+                <div>
+                    <h2>Actor Spawner</h2>
+                    <p class="p1">
+                        Set up as a child object to the Player Pawn, the Actor Spawner will take care of spawning and destroying units.
+                        The spawner will notify the Player Pawn of the creation/destruction of one of its units, making it recalculate the position of the current formation for each unit.
+                    </p>
+                </div>
+            </div>
+            <div class="PageColumn">
+                <img src="Resources/Resources_UnrealFormations_1.gif" alt="Your Image" style="width: 90%; height: 90%; " />
+            </div>
+        </div>
 
-            The individual units use a linear velocity to reach their target, here it is perfectly possible to calculate a steering behavior instead of just "seeking" to the target. The same goes for the general orientation of the formation: instead of just passing the default positions to each unit, I already implemented a function "ApplyRotation". Therefore a rotation calculation can just be pasted there and it will work.
-        </p>
-
-        <img src="Resources/Resources_UnrealFormations_1.gif">
-
-        <h1>Research Reference Links</h1>
-        <p class="p1">
-            https://docs.unrealengine.com/4.27/en-US/<br />
-            https://en.wikipedia.org/wiki/Triangular_array<br />
-            https://www.gamasutra.com/view/feature/3314/coordinated_unit_movement.php<br />
-            http://www.spronck.net/pubs/Heijden-CIG2008.pdf<br />
-        </p>
-    </section>
-
-    <!------ Footer ------>
-    <section class="footer">
-        <div class="contact">
-            <h1>Contact:</h1>
-            <h3>
-                e-mail: niels.bernaerdt@skynet.be
-                <br />tel: +32 478 43 89 53
-            </h3>
-            <div style="display: flex; gap: 5px; justify-content: center">
-                <a href="https://drive.google.com/file/d/1lWMY_FMNLQYvfuoHR9jH7aXTfUZgRpDP/view?usp=sharing" target="_blank" class="btn">DOWNLOAD RESUME</a>
-                <a href="https://www.linkedin.com/in/niels-bernaerdt-561952152/" target="_blank"><img src="Resources/IconLinkedIn.png" style="height: 43px; width:auto"></a>
-                <a href="https://github.com/NielsBernaerdt" target="_blank"><img src="Resources/IconGithub.png" style="height: 43px; width: auto"></a>
+        <div class="PageRow">
+            <div class="PageColumn">
+                <img src="Resources/Resources_UnrealFormations_3.gif" alt="Your Image" style="width: 90%; height: 90%;" />
+            </div>
+            <div class="PageColumn">
+                <div>
+                    <h2>Formations</h2>
+                    <p class="p1">
+                        A formations get calculated from the centerpoint, which corresponds to the location of the Player Pawn.
+                        <br />An array of 2D points is filled with locations corresponding to the chosen geometric figure before being passed on to the Player Controller, who will assign units to each position.
+                        <br />This approach makes it possible to run other algorithms on the array first, before passing it to the units, such as flocking algorithms, 
+                        or more simpler functions such as assigning each unit to its closest position
+                    </p>
+                </div>
             </div>
         </div>
     </section>
+        <!------ Footer ------>
+        <section class="footer">
+            <div class="contact">
+                <h1>Contact:</h1>
+                <h3>
+                    e-mail: niels.bernaerdt@skynet.be
+                    <br />tel: +32 478 43 89 53
+                </h3>
+                <div style="display: flex; gap: 5px; justify-content: center">
+                    <a href="https://drive.google.com/file/d/1lWMY_FMNLQYvfuoHR9jH7aXTfUZgRpDP/view?usp=sharing" target="_blank" class="btn">DOWNLOAD RESUME</a>
+                    <a href="https://www.linkedin.com/in/niels-bernaerdt-561952152/" target="_blank"><img src="Resources/IconLinkedIn.png" style="height: 43px; width:auto"></a>
+                    <a href="https://github.com/NielsBernaerdt" target="_blank"><img src="Resources/IconGithub.png" style="height: 43px; width: auto"></a>
+                </div>
+            </div>
+        </section>
 
-    <!------ JavaScript for Toggle Menu ------>
-    <script>
-        var navLinks = document.getElementById("navLinks");
-        function ShowMenu() {
-            navLinks.style.right = "0";
-        }
-        function HideMenu() {
-            navLinks.style.right = "-200px";
-        }
-    </script>
+        <!------ JavaScript for Toggle Menu ------>
+        <script>
+            var navLinks = document.getElementById("navLinks");
+            function ShowMenu() {
+                navLinks.style.right = "0";
+            }
+            function HideMenu() {
+                navLinks.style.right = "-200px";
+            }
+        </script>
 </body>
 </html>
